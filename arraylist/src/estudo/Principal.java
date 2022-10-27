@@ -27,7 +27,7 @@ public class Principal {
     */
 
 
-     /*
+     /* // VETOR COM OUTRA CLASSE!!!!
         System.out.print("Qual tamanho do vetor: ");
 
         int a = sc.nextInt();
@@ -47,7 +47,7 @@ public class Principal {
         }
 ------------------------------------------------------------------------------------------------
 */
-
+    /*
         System.out.print("Quantos numeros vai ser digitado: ");
         int v = sc.nextInt();
         int[] vetor = new int[v];
@@ -64,6 +64,73 @@ public class Principal {
                 System.out.print(vetor[i] + "   ");
         }
     }
+------------------------------------------------------------------------------------------------
+*/
+       /*
+        ************************** BOM!!!!!!
+        // PORCENTAGEM!!!
+        int n;
+        System.out.print("Quantas pessoas serao digitadas: ");
+        n = sc.nextInt();
+
+        String[] nomes = new String[n];
+        int[] idade = new int[n];
+        double[] altura = new double[n];
+
+        for (int i=0; i<n; i++){ //esse i é o numero ex: 1,2,3 oq vai incrementar
+            System.out.println("Dados da " + (i+1) + " pessoa: "); //i+1 foi para adicionar e dar certinho as 5
+            System.out.print("Nome: ");
+            nomes[i] = sc.next();
+            System.out.print("Idade: ");
+            idade[i] = sc.nextInt();
+            System.out.print("Altura: ");
+            altura[i] = sc.nextDouble();
+        }
+
+        //fazer a porcentagem de pessoas com menos de 16 anos, vai contar mesmo
+
+        int contar = 0;
+        for (int i=0; i<n; i++){
+            if(idade[i] < 16){
+                contar += 1;
+            }
+        }
+
+        double porcentagem = contar * 100.0 / n;                     //%% mostra o simbolo % e o %n linha
+        System.out.printf("Porcentagem de pessoas com menos de 16 anos:  %.1f%%%n", porcentagem);
+
+        System.out.println("Nomes das pessoas com menos de 16 anos: ");
+        for(int i=0; i<n; i++){
+            if(idade[i] < 16){
+                System.out.println(nomes[i]);
+            }
+        }
+------------------------------------------------------------------------------------------------------------
+*/
+        /*
+        //COLOCAR O FOR EM : dois pontos
+
+        String vetor [] = new String[] {"Andressa", "Arthur", "Zoe"};
+
+        //ao inves disso
+        for (int i=0; i< vetor.length; i++){
+            System.out.println(vetor[i]);
+        }
+
+        System.out.println("-------------------");
+        //faz isso
+
+        for(String qualquer : vetor){   //String pq é de só nomes, qualquer é qualquer nome q eu chamar
+                                         //    :  vetor é o nome do meu vetor
+            System.out.println(qualquer); // ai chama o nome que criei
+        }
+*/
+
+
+
+
+
+
 
     }
 }
