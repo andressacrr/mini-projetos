@@ -1,5 +1,7 @@
 package estudo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -125,12 +127,37 @@ public class Principal {
             System.out.println(qualquer); // ai chama o nome que criei
         }
 */
+//-----------------------------------------------------------------------------------------
 
+        // ARRAYLIST
 
+        List<String> lista = new ArrayList<>();
 
+        lista.add("Andressa");
+        lista.add("Zoe");
+        lista.add("Arthur");
+        lista.add("Kiara");
+        lista.add(2, "Lais"); // index = posição
 
+        System.out.println("O tamanho da lista: " + lista.size()); // size = tamanho da lista
+        System.out.println("Lista original:");
 
+        for (String original : lista){
+            System.out.println(original);
+        }
 
+        System.out.println("--------------------------");
+          lista.remove(4);
+//         lista.remove("Kiara"); tanto faz
 
+        // usar predicado para remover odo mundo que começa com a letra A
+        lista.removeIf(original -> original.charAt(0) == 'A');
+
+        for (String original : lista){
+            System.out.println(original);
+        }
+
+        System.out.println("--------------------------");
+        System.out.println("Posicao da Lais: " + lista.indexOf("Lais"));
     }
 }
